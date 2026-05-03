@@ -18,7 +18,6 @@
         "resources": {
             "ffmpeg\\bin\\ffmpeg.exe": "./",
             "ffmpeg\\bin\\ffprobe.exe": "./",
-            "ffmpeg\\bin\\*.dll": "./",
             "ffmpeg\\lib\\*": "./",
             "onnxruntime*\\lib\\onnxruntime.dll": "./",
             "openblas\\bin\\*.dll": "./",
