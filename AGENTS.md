@@ -12,6 +12,14 @@ This file records local build lessons so a new agent/conversation can resume wit
 - Successful NSIS installer:
   `apps\screenpipe-app-tauri\src-tauri\target\release\bundle\nsis\screenpipe - Development_2.4.124_x64-setup.exe`
 
+## Branch strategy for this fork
+
+- Keep `main` as the clean upstream-tracking baseline for `screenpipe/screenpipe`.
+- Use `build` as the long-lived fork branch for local/self-distributed builds, Windows packaging fixes, i18n work, and future release/updater experiments.
+- Prefer new feature branches off `build`, for example `feature/i18n-zh-cn` or `feature/github-updater`, then merge them back into `build`.
+- To follow upstream later, update `main` from `upstream/main`, then merge `main` into `build` and resolve conflicts there.
+- The old temporary branch name `build/windows-ci` was only for the initial Windows build experiment; prefer `build` going forward.
+
 ## Successful local build command
 
 Run from PowerShell. This keeps the heavy ASR default features off while preserving `custom-protocol`, which production Tauri builds need.
